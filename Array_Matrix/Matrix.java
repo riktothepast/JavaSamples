@@ -38,6 +38,7 @@ public class Matrix {
             {
               System.out.print( matrixIntegers[x][y]+", " );
             }
+            System.out.println();
       }
 
       // Tambien podemos conocer si una posicion que deseemos siempre  ycuando este dentro de los limites del array

@@ -23,7 +23,7 @@ public class byScanner {
 
 		String stringValue=reader.next();
 
-		System.out.println("ud. Ingreso: "stringValue+" "+valNumerico);
+		System.out.println("ud. Ingreso: "+stringValue+" "+valNumerico);
    
    }
 

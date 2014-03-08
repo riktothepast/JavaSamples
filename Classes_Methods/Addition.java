@@ -15,6 +15,8 @@ public class Addition {
 
       public int getAddition(int x, int y)
    {
+   	int w =0 ;
+   	
          return x+y;
    }
 

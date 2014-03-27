@@ -16,15 +16,17 @@ public class Primitives extends JPanel{
  	public void update (Graphics g){
 
 
-   		 g.setColor(Color.black);
+   		 g.setColor(Color.RED);
 		 g.fillRect(0, 0, getSize().width, getSize().height);	
 		 
 		 g.setColor(Color.GREEN);
 		 g.fillRect(40, 40, 40, 40);
-		 g.setColor(Color.RED);
-		 g.fillOval(100,100,40,40);
+
+		 g.setColor(Color.BLUE);
+		 g.fillOval(getSize().width/2, getSize().height/2,20,30);
+
 		 g.setColor(Color.YELLOW);
-   		g.drawLine(10, 10, 100, 100);
+		 g.drawLine(10,10,10,100);
 		 repaint();
 	 }
 

@@ -15,7 +15,7 @@ public class Main {
 		Primitives prim= new Primitives();
 		BouncyBall bBall= new BouncyBall();
 		
-		jframe.add(prim);
+		jframe.add(bBall);
 		jframe.setVisible(true);
 	}
 	

@@ -21,12 +21,11 @@ public class BouncyBall extends JPanel{
 		 g.fillRect(0, 0, getSize().width, getSize().height);	
 		 g.setColor(Color.RED);
 		 g.fillOval(posX,posY,100,100);
-
-
+	
 		 posX+=dirX;
 		 posY+=dirY;
 
-		 // make it bounce
+		// make it bounce
 		 if(posX>getSize().width){
 		 	dirX = -1;
 		 }
@@ -40,7 +39,7 @@ public class BouncyBall extends JPanel{
 		 if(posY<0){
 		 	dirY = 1;
 		 }
-
+		 
 
 		 repaint();
 	 }

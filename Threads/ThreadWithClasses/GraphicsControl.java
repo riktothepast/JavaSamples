@@ -5,20 +5,25 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 
+
 public class GraphicsControl extends JPanel implements Runnable,  KeyListener{
 
 	private static final long serialVersionUID = 1L;
 	private Graphics dbg;
 
-	public Pelota pelota1, pelota2, pelota3;
+	//declaramos nuestras 3 esferas.
+
+	public Esfera pelota1, pelota2, pelota3;
 
 	int threadSleepTime = 50;
 
 
 	public GraphicsControl(){
-		pelota1 = new Pelota(this, 10, 10);
-		pelota2 = new Pelota(this, 300, 100);
-		pelota3 = new Pelota(this, 10, 400);
+		//Les asignamos diferentes valores a cada una al inicializarlas.
+
+		pelota1 = new Esfera(this, 10, 10, 10,25, Color.WHITE);
+		pelota2 = new Esfera(this, 300, 100,14,20, Color.RED);
+		pelota3 = new Esfera(this, 10, 400,20,15,Color.CYAN);
 	}
 
 	public void paint(Graphics g) {
@@ -26,10 +31,13 @@ public class GraphicsControl extends JPanel implements Runnable,  KeyListener{
 	}
 	
 	public void update (Graphics g){
-
+		// primero pintamos un rectangulo del total de la pantalla para "borrar" el dibujo anterior
 
 		g.setColor(Color.black);
 		g.fillRect(0, 0, getSize().width, getSize().height);	
+
+			//ahora pintamos cada una de nuestras entidades
+
 			pelota1.Draw(g);
 			pelota2.Draw(g);
 			pelota3.Draw(g);
@@ -45,6 +53,7 @@ public class GraphicsControl extends JPanel implements Runnable,  KeyListener{
 
 		while(true){
 
+				//actualizamos nuestras entidades
 				pelota1.Update();
 				pelota2.Update();
 				pelota3.Update();
